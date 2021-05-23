@@ -64,7 +64,7 @@
  }
  .merop__content__info--img{
      width: 55%;
-     min-width: 400px;
+
  }
  .merop__content__info--img__dop{
      border-radius: 15px;

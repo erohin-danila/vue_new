@@ -6,29 +6,36 @@ import {api} from "@/helpers/api"
          // eslint-disable-next-line no-useless-catch
          try {
              //const res = await api.get('/api/posters/')
-             const res = await api.get('/HermanQuaint/IT-hakaton-2021/master/public/movies.json')
+             const res = await api.get('/posters')
              return res
          } catch (e) {throw e}
      }
 
-    //  async getCat() {
-    //     // eslint-disable-next-line no-useless-catch
-    //     try {
-    //         //const res = await api.get('/api/posters/')
-    //         const res = await api.get('/categories')
-    //         return res
-    //     } catch (e) {throw e}
-    // }
-    
-    // async getDatePost() {
-    //      // eslint-disable-next-line no-useless-catch
-    //      try {
-    //          //const res = await api.get('/api/posters/')
-    //          const res = await api.get('/sort_in_ascending_order_of_date')
-    //          return res
-    //      } catch (e) {throw e}
-    //  }
+     async getCat() {
+        // eslint-disable-next-line no-useless-catch
+        try {
+            //const res = await api.get('/api/posters/')
+            const res = await api.get('/categories')
+            return res
+        } catch (e) {throw e}
+    }
 
+    async getDate() {
+         // eslint-disable-next-line no-useless-catch
+         try {
+             //const res = await api.get('/api/posters/')
+             const res = await api.get('/sort_in_ascending_order_of_date')
+             return res
+         } catch (e) {throw e}
+     }
+     async getSort() {
+         // eslint-disable-next-line no-useless-catch
+         try {
+             //const res = await api.get('/api/posters/')
+             const res = await api.get('/sort_in_ascending_order_of_date')
+             return res
+         } catch (e) {throw e}
+     }
 
  }
 

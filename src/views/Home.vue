@@ -8,23 +8,25 @@
     </section>
     <section>
       <h2 class="title">Скоро</h2>
-      <!-- <CaruselCat/> -->
+      <CaruselDate/>
     </section>
     <section>
       <h2 class="title">По темам</h2>
-      <!-- <CaruselDate/> -->
+       <CaruselCat/>
     </section>
   </div>
 </template>
 
 <script>
 import Carusel from "@/components/Carusel.vue";
-// import CaruselCat from "@/components/CaruselCat.vue"
-// import CaruselDate from "@/components/CaruselDate.vue"
+import CaruselCat from "@/components/CaruselCat.vue"
+import CaruselDate from "@/components/CaruselDate.vue"
 export default {
   name: 'Home',
   components: {
-    Carusel
+    Carusel,
+    CaruselCat,
+    CaruselDate
   }
 
 }

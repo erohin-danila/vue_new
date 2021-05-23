@@ -12,7 +12,7 @@
                 <router-link to="/merops" style="text-decoration: none"> <p class="header__user_sob">события</p></router-link>
                 <router-link style="text-decoration:none; color:black" to="/isbr"><p class="header__user_tema">избранное</p></router-link>
                 <!-- <p class="header__user_name">{{ username }}</p> -->
-            <router-link to="/profile"><img src="@/assets/img/user.svg" alt="" class="header__user__img" width="45px" height="45px"></router-link>
+            <router-link to="/vhod"><img src="@/assets/img/user.svg" alt="" class="header__user__img" width="45px" height="45px"></router-link>
                 <!-- <img src="@/assets/img/vhod.svg" alt="" class="header__user__strelka"> -->
             </div>
         </header>
@@ -48,7 +48,7 @@ transition: all .1s ease;
 }
 .sortOpen{
     position: absolute;
-    z-index: -9999;
+
     top: 45px;
     left:20%;
     transition: .5s;
@@ -227,7 +227,7 @@ transition: all 0.5s ease;
 }
 .sortOpen{
   position: fixed;
-    z-index: 9999;
+
     top:0;
     left:0;
     transition: 0;
@@ -242,9 +242,11 @@ transition: all 0.5s ease;
 
 
 <script>
+
 import Sort from "@/components/Header/Sort.vue"
 import Poisk from "@/components/Header/Poisk.vue"
 export default{
+
     data(){
         return{
              username: "егор",
@@ -258,6 +260,7 @@ export default{
         Poisk
     },
     methods:{
+
      openSort(){
         this.sortActive = !this.sortActive;
         this.showSort = !this.showSort;

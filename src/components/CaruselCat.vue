@@ -2,7 +2,7 @@
   <hooper :settings="hooperSettings">
     <slide class="wrapper" :style="{'--urlimg': 'url(' + posterCat.image + ')'}" v-for="(posterCat, indx) in getPostersCat" :key="indx" :index="indx">
      <div style="width:100%">
-        <img class="wrapper__img" width="100%" :src="posterCat.image" alt="">
+<!--        <img class="wrapper__img" width="100%" :src="posterCat.image" alt="">-->
         <h2 class="title title__sag">{{ posterCat.title }}</h2>
      </div>
 
@@ -39,11 +39,11 @@ export default {
   methods: {},
 
   computed: {
-    getPosters() {
-      return this.$store.getters['posterCat/getPosters']
+    getPostersCat() {
+      return this.$store.getters['poster/getPostersCat']
     },
-    getPoster() {
-      return this.$store.getters['posterCat/getPoster']
+    getPosterCat() {
+      return this.$store.getters['poster/getPosterCat']
     },
 
     //getPosters() {
@@ -52,10 +52,10 @@ export default {
 
   },
   async mounted() {
-    console.log(this.$store.state.posters)
+
   },
   created() {
-    this.$store.dispatch('posterCat/getCat');
+    this.$store.dispatch('poster/getCat');
     
   },
   name: 'Carusel',
@@ -71,7 +71,6 @@ export default {
   height: 100%;
   width: 100%;
   border-radius: 10px;
-  filter: blur(1px);
 }
 .carusel-img {
   width: 100%;
@@ -85,7 +84,7 @@ export default {
 background-color: #FFE698;
 opacity: 0.9;
 border: 1px gray solid;
-  // background-image: var(--urlimg);
+   background-image: var(--urlimg);
  
   background-position: top;
   background-repeat: no-repeat;

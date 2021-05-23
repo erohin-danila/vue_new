@@ -1,23 +1,23 @@
 <template>
        <div  class="koren" >
-             <div class="block"  v-for="(poster, indx) in getPosters" :key="indx" :index="indx">
+             <div class="block"  v-for="(posterSort, indx) in getPostersSort" :key="indx" :index="indx">
                   <div class="block__img">
                       <router-link to="/merop">
-                      <img  :src="poster.image" width="100%" height="100%"  class="block__img--img">
-                     
+                      <img  :src="posterSort.image" width="100%" height="100%"  class="block__img--img">
+
                       </router-link>
                       <div  v-on:click="Isbr" class="block__img__button"><img :src="imgAdress" alt="">
                   </div>
                   </div>
                   <div class="block__info">
                       <div class="block__absaz">
-                       {{ poster.title }}
+                       {{ posterSort.title }}
                       </div>
                       <div class="block__dopInfo">
                           <div class="block__dopInfo__category">
-                            {{poster.category }}
+                            {{posterSort.category }}
                           </div>
-                          <div class="block__dopInfo__data"> {{poster.date_lower}}</div>
+                          <div class="block__dopInfo__data"> {{posterSort.date_lower}}</div>
                       </div>
                   </div>
              </div>
@@ -71,7 +71,7 @@
      height: 40%;
      flex-direction: column;
      justify-content: space-between;
-     
+
  }
  .block__dopInfo{
      align-items: center;
@@ -121,10 +121,10 @@ export default{
     data(){
         return{
             imgAdress: require("@/assets/img/isbr.svg"),
-            img: poster.image,
+            img: posterSort.image,
         }
     },
- 
+
  methods:{
      Isbr(){
          if( this.imgAdress == require("@/assets/img/Isbr2.svg")){
@@ -132,39 +132,37 @@ export default{
          }else {
                this.imgAdress = require("@/assets/img/Isbr2.svg")
          }
-      
+
      }
  },
 
 
 
 computed: {
-    getPosters() {
-      return this.$store.getters['poster/getPosters']
+    getPostersSort() {
+      return this.$store.getters['poster/getPostersSort']
     },
-    getPoster() {
-      return this.$store.getters['poster/getPoster']
+    getPosterSort() {
+      return this.$store.getters['poster/getPosterSort']
     },
 
-    //getPosters() {
-    //return this.$store.getters.getPosters
+    //getPostersSort() {
+    //return this.$store.getters.getPostersSort
     //},
 
   },
   async mounted() {
-    console.log(this.$store.state.posters)
+
   },
   created() {
-    this.$store.dispatch('poster/getAll');
+    this.$store.dispatch('poster/getSort');
 
-         
-      
+
+
   },
 
 
 
  }
-//   props: {
-//       poster:Object
-//   }
+//
 </script>

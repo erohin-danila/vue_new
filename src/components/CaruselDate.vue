@@ -2,7 +2,7 @@
   <hooper :settings="hooperSettings">
     <slide class="wrapper" :style="{'--urlimg': 'url(' + posterDate.image + ')'}" v-for="(posterDate, indx) in getPostersDate" :key="indx" :index="indx">
      <div style="width:100%">
-        <img class="wrapper__img" width="100%" :src="posterCat.image" alt="">
+<!--        <img class="wrapper__img" width="100%" :src="posterCat.image" alt="">-->
         <h2 class="title title__sag">{{ posterDate.title }}</h2>
      </div>
 
@@ -18,7 +18,7 @@ import posterDate from "../store/poster";
 
 export default {
   data: () => ({
-    img: posterCat.image,
+    img: posterDate.image,
 
     hooperSettings: {
       itemsToShow: 1.5,
@@ -39,11 +39,11 @@ export default {
   methods: {},
 
   computed: {
-    getPosters() {
-      return this.$store.getters['posterDate/getPostersDate']
+    getPostersDate() {
+      return this.$store.getters['poster/getPostersDate']
     },
-    getPoster() {
-      return this.$store.getters['posterDate/getPosterDate']
+    getPosterDate() {
+      return this.$store.getters['poster/getPosterDate']
     },
 
     //getPosters() {
@@ -52,22 +52,24 @@ export default {
 
   },
   async mounted() {
-    console.log(this.$store.state.postersDate)
+
   },
   created() {
-    this.$store.dispatch('posterDate/getDate');
+    this.$store.dispatch('poster/getDate');
     
   },
   name: 'Carusel',
   components: {
     Hooper,
     Slide,
-    posterDate
   }
 };
 </script>
 
 <style scoped lang="scss">
+slide{
+  outline: none;
+}
 .wrapper__img{
   height: 100%;
   width: 100%;
@@ -86,7 +88,7 @@ export default {
 background-color: #FFE698;
 opacity: 0.9;
 border: 1px gray solid;
-  // background-image: var(--urlimg);
+  background-image: var(--urlimg);
  
   background-position: top;
   background-repeat: no-repeat;
@@ -105,22 +107,30 @@ border: 1px gray solid;
 
 }
 .title__sag{
- position: absolute;
- top: 75%;
- width: 45%;
- 
+  position: absolute;
+  top: 65%;
+  width: 45%;
+
 }
 
 @media (min-width:800px) {
-  .title {
-    font-size: 1.3rem;
+  .title__sag {
+    font-size: 1rem;
+    width: 35%;
   }
 }
 @media (min-width:1000px) {
-  .title {
-    font-size: 1.3rem;
+  .title__sag {
+    font-size: 1rem;
+    width: 20%;
   }
 }
+@media (min-width: 1900px){
+  .title__sag{
+    top: 70%;
+    width: 35%;
+  }
 
+}
 
 </style>

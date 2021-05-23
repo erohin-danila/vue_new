@@ -14,7 +14,7 @@
            </select></div>
       <div class="sortirovka__block"><span class="sortirovka__text">Дата</span><select name="select">
              <option value="value1"  selected>без сортировки</option>
-             <option value="value2" >от большего к меньшему</option>
+             <option value="value2"  >от большего к меньшему</option>
              <option value="value3">от меньшего к большему</option>
            </select></div>
        <div class="sortirovka__block"><span class="sortirovka__text">Цена</span><select name="select">
@@ -121,6 +121,9 @@ select{
 import Poisk from "@/components/Header/Poisk.vue"
 export default{
 methods:{
+  qwerty(){
+     console.log(this.res)
+  },
      openSort(){
         this.sortActive = !this.sortActive;
         this.showSort = !this.showSort

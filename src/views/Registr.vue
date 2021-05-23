@@ -9,15 +9,15 @@
                <input type="text" class="profile__info__block--sag__vvod">
             </div>
             <div class="profile__info__block">
-               <div class="profile__info__block--sag"></div>
-               <input type="text" class="profile__info__block--sag__vvod">
-            </div>
-            <div class="profile__info__block">
                <div class="profile__info__block--sag">Введите логин</div>
                <input type="text" class="profile__info__block--sag__vvod">
             </div>
+            <div class="profile__info__block">
+               <div class="profile__info__block--sag">Придумайте пароль</div>
+               <input type="text" class="profile__info__block--sag__vvod">
+            </div>
                 <div class="profile__info__block">
-               <div class="profile__info__block--sag">Введите пароль</div>
+               <div class="profile__info__block--sag">Повторите пароль</div>
                <div class="group"><input type="text" class="profile__info__block--sag__vvod"></div>
             </div>
              
@@ -40,7 +40,7 @@
 .button__div{
     display: flex;
     width: 100%;
-    justify-content: flex-end;
+    justify-content: center;
 }
 .profile_info_viyti{
     width: 20%;
@@ -65,6 +65,8 @@
     align-items: center;
     justify-content: center;
     display: flex;
+  align-items: center;
+  justify-content: center;
     flex-direction: column;
 }
 .profile__info__block{
@@ -143,5 +145,12 @@
 .profile_info_viyti{
     margin-top: 200px;
 }
+}
+@media (min-width: 1400px){
+  .profile_info_viyti{
+    width: 200px;
+    max-width: 200000px;
+  }
+
 }
 </style>

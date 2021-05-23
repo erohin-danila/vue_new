@@ -23,7 +23,7 @@
               <div class="button__div"> <button class="profile__info__block__button">Изменить</button></div>
             </div>
         </div>
-       <div class="button__div"> <button class="profile_info_viyti">Выйти</button></div>
+      <router-link to="/vhod"> <div class="button__div"> <button class="profile_info_viyti">Выйти</button></div></router-link>
     </div>
 </template>
 
@@ -35,7 +35,7 @@
     justify-content: flex-end;
 }
 .profile_info_viyti{
-    width: 20%;
+    width: 50%;
     padding: 1px;
     border-radius: 4px;
     min-width: 100px;
