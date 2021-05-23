@@ -11,12 +11,23 @@ import {api} from "@/helpers/api"
          } catch (e) {throw e}
      }
 
-     /*async getById(id) {
-         try {
-             const res = await api.get(`/api/posters/${id}/`)
-             return res.data
-         } catch (e) {throw e}
-     }*/
+    //  async getCat() {
+    //     // eslint-disable-next-line no-useless-catch
+    //     try {
+    //         //const res = await api.get('/api/posters/')
+    //         const res = await api.get('/categories')
+    //         return res
+    //     } catch (e) {throw e}
+    // }
+    
+    // async getDatePost() {
+    //      // eslint-disable-next-line no-useless-catch
+    //      try {
+    //          //const res = await api.get('/api/posters/')
+    //          const res = await api.get('/sort_in_ascending_order_of_date')
+    //          return res
+    //      } catch (e) {throw e}
+    //  }
 
 
  }

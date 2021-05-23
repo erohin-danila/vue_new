@@ -49,6 +49,7 @@ export default {
 
 
 <style scoped lang="scss">
+
  .shiftx-enter-active, .shiftx-leave-active {
       transition: all 2s ease-in-out;
    }

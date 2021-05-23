@@ -18,7 +18,7 @@
         </header>
         <div class="header__poisk__adaptiv"><input type="text" placeholder="Поиск..."><button v-on:click="openSort"  class="header__poisk__knopka"></button></div>
     <transition name="sortAnim">
-         <Sort v-if="showSort" class="sortOpen" v-bind:class="{sort:sortActive}"/>
+         <Sort v-show="showSort" class="sortOpen" v-bind:class="{sort:sortActive}"/>
         
     </transition>
      <button v-on:click="openSort" class="closeSortButton" :class="{closeSort:closeSortx}"></button>
@@ -48,7 +48,7 @@ transition: all .1s ease;
 }
 .sortOpen{
     position: absolute;
-    z-index: 9999;
+    z-index: -9999;
     top: 45px;
     left:20%;
     transition: .5s;
@@ -56,7 +56,7 @@ transition: all .1s ease;
 }
 .sort{
    position: absolute;
-   z-index: -9999;
+   z-index: 9999;
    top:0px;
    transition: .5s;
     transition-duration: 2s;

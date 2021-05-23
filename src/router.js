@@ -6,6 +6,8 @@ import Merops from "@/views/Merops.vue";
 import Merop from "@/views/Merop.vue";
 import Profile from "@/views/Profile.vue"
 import Isbr from "@/views/Isbr.vue"
+import Vhod from "@/views/Vhod.vue"
+import Registr from "@/views/Registr.vue"
 Vue.use(Router)
 export default new Router ({
     mode: "history",
@@ -34,7 +36,15 @@ export default new Router ({
         {
             path: "/profile",
             component: Profile
-        }
+        },
+        {
+            path: "/vhod",
+            component: Vhod
+        },
+        {
+            path: "/registr",
+            component: Registr
+        },
     ]
 })
 

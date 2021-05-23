@@ -3,7 +3,7 @@
              <div class="block"  v-for="(poster, indx) in getPosters" :key="indx" :index="indx">
                   <div class="block__img">
                       <router-link to="/merop">
-                      <img  :src="poster.image" width="100%" onerror="this.onerror=null;this.src=window.fallbackImage" height="100%"  class="block__img--img">
+                      <img  :src="poster.image" width="100%" height="100%"  class="block__img--img">
                      
                       </router-link>
                       <div  v-on:click="Isbr" class="block__img__button"><img :src="imgAdress" alt="">
@@ -26,11 +26,15 @@
 
 
 <style lang="scss" scoped>
+.block__dopInfo__data{
+    font-size: 0.7rem;
+}
 .koren{
  display: grid;
      grid-gap: 10px;
      grid-template-columns: repeat( auto-fit, minmax(300px, 1fr));
 }
+
 .block{
     border: 1px solid rgba(0, 0, 0, 0.12);
     margin: auto;
@@ -50,13 +54,13 @@
 .block__img{
  height: 60%;
  width: 100%;
- background-image: url("../../assets/img/not.png");
+//  background-image: url("../../assets/img/not.png");
  background-clip: border-box;
  background-size: contain;
  background-position: center;
  margin-bottom: 7px;
  border-radius: 8px;
- background-color: gray;
+ background-color: #FFE698;
 }
 .block__img--img{
   border-radius: 8px
@@ -75,8 +79,9 @@
      justify-content: space-between;
  }
  .block__absaz{
-     margin-bottom: 42px;
+     margin-bottom: 0;
  }
+
  .block__dopInfo__category{
      background-color:#FFAC0B;
      padding: 5px;

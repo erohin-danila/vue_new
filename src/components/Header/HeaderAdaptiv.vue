@@ -14,7 +14,7 @@
         </div>
         <div class="headerAdaptiv__block">
             <div class="headerAdaptiv__block__img"><img width="100%" src="@/assets/img/profile.svg" alt="" class="headerAdaptiv__block__img--img"></div>
-             <router-link style="text-decoration:none" to="/profile"><p class="headerAdaptiv__block_text">Профиль</p></router-link>
+             <router-link style="text-decoration:none" to="/vhod"><p class="headerAdaptiv__block_text">Профиль</p></router-link>
         </div>
         <transition name="sortAnim">
          <Sort v-if="showSort" class="sortOpen" v-bind:class="{sort:sortActive}"/>
@@ -26,7 +26,7 @@
 <style lang="scss" scoped>
 .headerAdaptiv{
     position: fixed;
-    top: 90%;
+    top: 92%;
     z-index: 9999999;
     left: 0;
     font-size: 0,7143rem;
